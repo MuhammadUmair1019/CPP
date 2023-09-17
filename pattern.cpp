@@ -258,7 +258,7 @@ void pattern10(int n)
   }
 }
 
-// efficient way 
+// efficient way
 void pattern11(int n)
 {
   for (int i = -n + 1; i < n; i++)
@@ -270,7 +270,50 @@ void pattern11(int n)
   }
 }
 // --------------------------------------------------------------------------
+// 1
+// 01
+// 101
+// 0101
+// 10101
 
+void pattern12(int n)
+{
+  int start = 1;
+  for (int i = 1; i <= n; i++)
+  {
+    start = (i % 2) ? 0 : 1;
+
+    for (int j = 1; j <= i; j++)
+    {
+      cout << start;
+      start = 1 - start;
+    }
+    cout << endl;
+  }
+}
+// --------------------------------------------------------------------------
+// 1
+// 01
+// 101
+// 0101
+// 10101
+
+void pattern13(int n)
+{
+  int start = 1;
+  for (int i = 1; i <= n; i++)
+  {
+    start = (i % 2) ? 0 : 1;
+
+    for (int j = 1; j <= i; j++)
+    {
+      cout << start;
+      start = 1 - start;
+    }
+    cout << endl;
+  }
+}
+// --------------------------------------------------------------------------
 
 int main()
 {
@@ -299,4 +342,9 @@ int main()
   pattern10(n);
   cout << endl;
   pattern11(n);
+  cout << endl;
+  pattern12(n);
+  cout << endl;
+  pattern13(n);
+  
 }
